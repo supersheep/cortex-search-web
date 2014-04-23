@@ -21,11 +21,11 @@ gulp.task('connect',function(){
 gulp.task('stylus', function(){
     var stylusOptions = {
         use: [nib()],
-        import : ["nib","variables","mixins"]
+        import : ["nib"]
     };
     gulp.src(["./css/*.styl"])
         .pipe(changed('./css/', { extension: '.css' }))
-        .pipe(stylus())
+        .pipe(stylus(stylusOptions))
         .pipe(gulp.dest('./css'))
         .pipe(connect.reload());
 });

@@ -5,12 +5,13 @@ mixin mod
             .star 200
             .download 298
         .desc
-            | jQuery JavaScript Library http://jquery.com
+            | jQuery JavaScript Library &nbsp
+            a http://jquery.com
 
 mixin meta(title,icon,link)
-    .meta
+    .meta.section
         i(class="icon-" + icon)
-        | #{title}
+        span.title #{title}
         span.pull-right #{link}
 
 doctype html
@@ -35,22 +36,39 @@ html
                 +mod
                 +mod
                 +mod
+                +mod
+                +mod
+            .detail
+                .block.header 
+                    .author
+                        img.avatar(src="https://avatars0.githubusercontent.com/u/1646564?s=460")
+                    .desc
+                        .title jquery
+                        .info by &nbsp
+                            a Kael 
+                            | &nbsp &nbsp Apr 19,2014
+                .block.intro
+                    |jQuery is a fast, small, and feature-rich JavaScript library. 
+                .block.readme 
+                    .title README
+                    .content
             .metas
-                +meta("like","Like","200 like")
-                +meta("Repo","github","github")
+                .top
+                +meta("like","like","200 like")
+                +meta("Repo","repo","github")
                 +meta("Home","home","blahblah")
                 +meta("Issues","bug","github.com")
-                .meta
+                .section.tags
                     .title Keywords
                     .tags
                         .tag jquery
                         .tag jquery
                         .tag jquery
                         .tag jquery
-                .meta
+                .section.maintainers
                     .title Maintainers
                     .avatars
-                        img.avatar
-                        img.avatar
-                        img.avatar
-                        img.avatar
+                        img.avatar-sm(src="https://avatars0.githubusercontent.com/u/1646564?s=460")
+                        img.avatar-sm(src="https://avatars0.githubusercontent.com/u/1646564?s=460")
+                        img.avatar-sm(src="https://avatars0.githubusercontent.com/u/1646564?s=460")
+                        img.avatar-sm(src="https://avatars0.githubusercontent.com/u/1646564?s=460")
