@@ -1,0 +1,56 @@
+mixin mod
+    .mod
+        .name jquery
+        .meta
+            .star 200
+            .download 298
+        .desc
+            | jQuery JavaScript Library http://jquery.com
+
+mixin meta(title,icon,link)
+    .meta
+        i(class="icon-" + icon)
+        | #{title}
+        span.pull-right #{link}
+
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title Cortex Search
+        link(rel="stylesheet",href="/css/search.css")
+    body
+        .head
+            .logo
+                img(src="/img/logo.png")
+            .search
+                i.icon-search
+                input.input
+                i.icon-close
+        .content
+            .mods
+                +mod
+                +mod
+                +mod
+                +mod
+                +mod
+                +mod
+            .metas
+                +meta("like","Like","200 like")
+                +meta("Repo","github","github")
+                +meta("Home","home","blahblah")
+                +meta("Issues","bug","github.com")
+                .meta
+                    .title Keywords
+                    .tags
+                        .tag jquery
+                        .tag jquery
+                        .tag jquery
+                        .tag jquery
+                .meta
+                    .title Maintainers
+                    .avatars
+                        img.avatar
+                        img.avatar
+                        img.avatar
+                        img.avatar

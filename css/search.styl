@@ -1,0 +1,120 @@
+mods_width= 350px
+meta_width= 350px
+font_color=#dadada
+body,h1,h2,h3,h4,h5,h6,p,ul,li
+    margin: 0
+    padding: 0
+    font-family: Helvetica Neue
+    font-weight: 100
+
+li
+    list-style-type: none
+
+.icon-search,
+.icon-close
+    width: 26px
+    height: 26px
+
+
+.icon-like,
+.icon-download,
+.icon-bug,
+.icon-home,
+.icon-repo
+    height: 22px
+    width: 22px
+
+.head
+    background-color: #000
+    background-image: url("/img/header-bg.jpg")
+    background-position: right top
+    background-repeat: no-repeat
+    height: 60px
+    padding: 10px 15px
+    .logo
+        position: absolute
+        float: left
+        top: 5px
+        left: 15px
+    .search
+        margin-left: 90px
+        margin-top: 10px
+        float: left
+        position: relative
+        width: 430px
+        background-color: #e6e6e7
+        border-radius: 5px
+        .icon-search
+            position: absolute
+            top: 6px
+            left: 6px
+            background-image: url("/img/icon-search.png")
+        .input
+            background-color: #e6e6e7
+            float: left
+            border: none
+            height: 20px
+            margin-left: 40px
+            width: 360px
+            outline: none
+            font-size: 16px
+            line-height: 20px
+            color: #333
+            padding: 10px 0 10px 0
+        .icon-close
+            position: absolute
+            background-image: url("/img/icon-close.png")
+            top: 6px
+            right: 6px
+
+
+mod-padding-right=15px
+mod-padding-top=18px
+$meta-item
+    position: relative
+    padding-left: 20px
+    float: left
+    &:before
+        position: absolute
+        content: ""
+        width: 22px
+        height: 22px
+        left: 0
+        top: 0
+        display: block
+        background-size: cover
+
+.mods
+    float: left
+    .mod
+        width: mods_width
+        background-color: #f5f5f5
+        border-bottom: 1px solid #d8d8d8
+        padding: mod-padding-top mod-padding-right 35px 24px
+        position: relative
+        .name
+            font-size: 22px
+            color: #333
+        .meta
+            font-size: 12px
+            color: #a6a6a6
+            position: absolute
+            right: mod-padding-right
+            top: mod-padding-top
+            .star
+                @extend $meta-item
+                &:before
+                    background-image: url("/img/icon-like.png")
+            .download
+                @extend $meta-item
+                &:before
+                    background-image: url("/img/icon-download.png")
+        .desc
+            font-size: 14px
+            margin-top: 14px
+            color: #666
+
+.metas
+    width: meta_width
+    .meta
+        margin: 0 30px
